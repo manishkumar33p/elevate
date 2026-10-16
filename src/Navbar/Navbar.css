@@ -1,0 +1,790 @@
+/* =========================================================
+   ELEVATE INFRA NAVBAR
+   Premium White + Deep Blue + Subtle Gold
+========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  height: 82px;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(18, 56, 80, 0.09);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.nav-inner {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #123850;
+
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #b08745;
+
+  color: #123850;
+
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-weight: 600;
+
+  position: relative;
+}
+
+.brand-mark::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  right: -4px;
+  bottom: -4px;
+
+  background: #b08745;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.brand-copy b {
+  color: #123850;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: 2.8px;
+}
+
+.brand-copy small {
+  margin-top: 5px;
+
+  color: #8b6a36;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+/* =========================================================
+   MAIN NAV LINKS
+========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 4px;
+}
+
+/*
+   IMPORTANT:
+   > means only direct navbar links.
+   Admin dropdown links will NOT inherit this styling.
+*/
+
+.nav-links > a:not(.nav-cta) {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  height: 82px;
+
+  padding: 0 14px;
+
+  color: #536b79;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.35px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.nav-links > a:not(.nav-cta)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 19px;
+
+  height: 1px;
+
+  background: #b08745;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.nav-links > a:not(.nav-cta):hover {
+  color: #123850;
+}
+
+.nav-links > a:not(.nav-cta):hover::after,
+.nav-links > a:not(.nav-cta).active::after {
+  transform: scaleX(1);
+}
+
+.nav-links > a:not(.nav-cta).active {
+  color: #123850;
+}
+
+/* =========================================================
+   ENQUIRE BUTTON
+========================================================= */
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 42px;
+
+  margin-left: 12px;
+  padding: 0 19px;
+
+  background: #123850;
+  border: 1px solid #123850;
+
+  color: #ffffff !important;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.nav-cta span {
+  color: #dfc78e;
+
+  font-size: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.nav-cta:hover {
+  background: #b08745;
+
+  border-color: #b08745;
+
+  color: #ffffff !important;
+}
+
+.nav-cta:hover span {
+  color: #ffffff;
+
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: 1px solid #d6e2e8;
+
+  color: #123850;
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   ADMIN DROPDOWN WRAPPER
+========================================================= */
+
+.nav-admin-dropdown {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 82px;
+}
+
+/* =========================================================
+   ADMIN TRIGGER
+========================================================= */
+
+.nav-admin-trigger {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 82px;
+
+  padding: 0 14px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #536b79;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.35px;
+
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+}
+
+.nav-admin-trigger::after {
+  content: "";
+
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+
+  bottom: 19px;
+
+  height: 1px;
+
+  background: #b08745;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.nav-admin-trigger:hover {
+  color: #123850;
+}
+
+.nav-admin-trigger:hover::after {
+  transform: scaleX(1);
+}
+
+.admin-arrow {
+  display: inline-block;
+
+  margin-left: 7px;
+
+  font-size: 10px;
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+.admin-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   INVISIBLE HOVER BRIDGE
+
+   Keeps dropdown open while moving from Admin
+   to dropdown items.
+========================================================= */
+
+.nav-admin-dropdown::after {
+  content: "";
+
+  position: absolute;
+
+  left: -15px;
+  right: -15px;
+
+  top: 100%;
+
+  height: 18px;
+
+  background: transparent;
+}
+
+/* =========================================================
+   ADMIN DROPDOWN BOX
+========================================================= */
+
+.nav-admin-menu {
+  position: absolute;
+
+  top: calc(100% + 8px);
+
+  right: -20px;
+
+  width: 285px;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce7ed;
+
+  box-shadow:
+    0 18px 45px rgba(18, 56, 80, 0.14),
+    0 5px 15px rgba(18, 56, 80, 0.06);
+
+  z-index: 100000;
+
+  animation: adminDropdownIn 0.18s ease;
+}
+
+@keyframes adminDropdownIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   DROPDOWN POINTER
+========================================================= */
+
+.nav-admin-menu::before {
+  content: "";
+
+  position: absolute;
+
+  top: -6px;
+  right: 27px;
+
+  width: 11px;
+  height: 11px;
+
+  background: #ffffff;
+
+  border-left: 1px solid #dce7ed;
+  border-top: 1px solid #dce7ed;
+
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   ADMIN DROPDOWN ITEMS
+
+   IMPORTANT:
+   These selectors are isolated from main navbar.
+========================================================= */
+
+.nav-admin-menu a {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 30px 1fr 20px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  min-height: 58px;
+
+  padding: 10px 12px;
+
+  background: transparent;
+
+  color: #123850;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-admin-menu a:hover {
+  background: #edf6fa;
+
+  color: #123850;
+}
+
+.nav-admin-menu a:active {
+  background: #e4f0f5;
+}
+
+/* =========================================================
+   ADMIN NUMBER
+========================================================= */
+
+.admin-menu-number {
+  color: #b08745;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ADMIN TEXT
+========================================================= */
+
+.nav-admin-menu a div {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.nav-admin-menu a strong {
+  display: block;
+
+  color: #123850;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.nav-admin-menu a small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #687c89;
+
+  font-size: 9px;
+  font-weight: 400;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   ADMIN ARROW
+========================================================= */
+
+.nav-admin-menu a > b {
+  color: #b08745;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: right;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links > a:not(.nav-cta) {
+    padding: 0 10px;
+
+    font-size: 11px;
+  }
+
+  .nav-links > a:not(.nav-cta)::after {
+    left: 10px;
+    right: 10px;
+  }
+
+  .nav-admin-trigger {
+    padding: 0 10px;
+
+    font-size: 11px;
+  }
+
+  .nav-admin-trigger::after {
+    left: 10px;
+    right: 10px;
+  }
+
+  .nav-cta {
+    margin-left: 8px;
+
+    padding: 0 15px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+  .navbar {
+    height: 72px;
+  }
+
+  .nav-inner {
+    position: relative;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+
+    top: calc(100% + 1px);
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 10px 14px 16px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #dce7ed;
+
+    border-top: 0;
+
+    box-shadow:
+      0 18px 40px rgba(18, 56, 80, 0.1);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+
+  /* Normal mobile links */
+
+  .nav-links > a:not(.nav-cta) {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 12px;
+
+    justify-content: flex-start;
+
+    border-bottom: 1px solid #edf2f5;
+
+    color: #365769;
+  }
+
+  .nav-links > a:not(.nav-cta)::after {
+    display: none;
+  }
+
+  .nav-links > a:not(.nav-cta).active {
+    background: #f1f7fa;
+
+    color: #123850;
+  }
+
+  /* =======================================================
+     MOBILE ADMIN
+  ======================================================= */
+
+  .nav-admin-dropdown {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+  }
+
+  .nav-admin-dropdown::after {
+    display: none;
+  }
+
+  .nav-admin-trigger {
+    width: 100%;
+
+    height: 48px;
+
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    border-bottom: 1px solid #edf2f5;
+
+    color: #365769;
+
+    font-size: 12px;
+  }
+
+  .nav-admin-trigger::after {
+    display: none;
+  }
+
+  .nav-admin-trigger:hover {
+    color: #123850;
+  }
+
+  .nav-admin-menu {
+    position: static;
+
+    width: 100%;
+
+    margin: 4px 0 10px;
+
+    padding: 6px;
+
+    border: 1px solid #dce7ed;
+
+    box-shadow: none;
+
+    animation: none;
+  }
+
+  .nav-admin-menu::before {
+    display: none;
+  }
+
+  .nav-admin-menu a {
+    min-height: 54px;
+
+    padding: 10px 12px;
+  }
+
+  /* Enquire */
+
+  .nav-cta {
+    width: 100%;
+
+    min-height: 46px;
+
+    margin: 12px 0 0;
+
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+
+    font-size: 19px;
+  }
+
+  .brand-copy b {
+    font-size: 14px;
+
+    letter-spacing: 2.2px;
+  }
+
+  .brand-copy small {
+    font-size: 7px;
+
+    letter-spacing: 3.5px;
+  }
+
+  .menu-btn {
+    width: 39px;
+    height: 39px;
+  }
+}

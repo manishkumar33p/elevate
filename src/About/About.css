@@ -1,0 +1,754 @@
+/* .about-hero{background-image:linear-gradient(90deg,rgba(5,12,9,.94),rgba(5,12,9,.42)),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1900&q=88')}.about-story{background:#101c18}.about-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px}.about-story-grid p{color:#aab7b0;font-size:17px;margin-bottom:20px}.purpose{background:#0b1512}.principle-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #2a3a33;border-left:1px solid #2a3a33}.principle-grid article{padding:35px 28px;min-height:290px;border-right:1px solid #2a3a33;border-bottom:1px solid #2a3a33}.principle-grid b{color:#c9a96b;font-size:13px}.principle-grid h3{font-family:'Playfair Display',serif;font-size:29px;font-weight:500;margin:42px 0 14px}.principle-grid p{color:#96a49d;font-size:14px}.about-vision{padding:120px 0;background:linear-gradient(90deg,rgba(6,13,10,.92),rgba(6,13,10,.58)),url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1900&q=88') center/cover}.vision-box{max-width:1000px}.vision-box h2{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,72px);font-weight:500;line-height:1.05;margin-bottom:30px}.vision-box h2 span{color:#c9a96b}@media(max-width:850px){.about-story-grid{grid-template-columns:1fr;gap:40px}.principle-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.principle-grid{grid-template-columns:1fr}} */
+/* =========================================================
+   ELEVATE INFRA - ABOUT
+   WHITE + ICE BLUE + DEEP NAVY + CHAMPAGNE
+========================================================= */
+
+.about-hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 150px 0 75px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 27, 45, 0.94) 0%,
+      rgba(8, 38, 61, 0.74) 48%,
+      rgba(8, 38, 61, 0.25) 100%
+    ),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1900&q=90")
+    center / cover;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero .eyebrow {
+  color: #e6cc94;
+}
+
+.about-hero .page-title {
+  max-width: 850px;
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 5.5vw, 70px);
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.about-hero .page-title span {
+  color: #e6cc94;
+}
+
+.about-hero p {
+  max-width: 630px;
+  margin-top: 22px;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COMMON ABOUT
+========================================================= */
+
+.about-intro,
+.about-story,
+.about-approach,
+.about-purpose,
+.about-principles,
+.about-design,
+.vision-mission,
+.about-future {
+  padding: 72px 0;
+}
+
+.about-intro .eyebrow,
+.about-story .eyebrow,
+.about-approach .eyebrow,
+.about-purpose .eyebrow,
+.about-principles .eyebrow,
+.about-design .eyebrow,
+.vision-mission .eyebrow,
+.about-future .eyebrow {
+  color: #a77b32;
+}
+
+.about-intro h2,
+.about-story h2,
+.about-approach h2,
+.about-purpose h2,
+.about-principles h2,
+.about-design h2,
+.vision-mission h2,
+.about-future h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 3.8vw, 48px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+
+  color: #102f46;
+}
+
+.about-intro h2 span,
+.about-story h2 span,
+.about-approach h2 span,
+.about-purpose h2 span,
+.about-principles h2 span,
+.about-design h2 span,
+.vision-mission h2 span,
+.about-future h2 span {
+  color: #477b9d;
+}
+
+.about-text-link {
+  display: inline-block;
+  margin-top: 8px;
+
+  color: #17587f;
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.about-text-link:hover {
+  color: #a77b32;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.about-intro {
+  background: #ffffff;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-intro-heading h2 {
+  max-width: 500px;
+}
+
+.about-intro-copy p {
+  color: #657a88;
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   SMALL STATS
+========================================================= */
+
+.about-stats {
+  background: #eef6fa;
+  border-top: 1px solid #d8e7ef;
+  border-bottom: 1px solid #d8e7ef;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.about-stats-grid > div {
+  min-height: 115px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-right: 1px solid #d5e3eb;
+}
+
+.about-stats-grid > div:last-child {
+  border-right: 0;
+}
+
+.about-stats strong {
+  color: #b18742;
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+}
+
+.about-stats span {
+  margin-top: 7px;
+
+  color: #536f81;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.about-story {
+  background: #f8fbfd;
+}
+
+.about-story-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-story-image {
+  position: relative;
+  height: 500px;
+}
+
+.about-story-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-label {
+  position: absolute;
+  right: -20px;
+  bottom: 25px;
+
+  width: 225px;
+  padding: 20px;
+
+  background: #103b59;
+  color: #ffffff;
+
+  box-shadow: 0 15px 35px rgba(16, 59, 89, 0.2);
+}
+
+.about-image-label span {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #e4c98f;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.about-image-label strong {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.about-story-content p {
+  margin-top: 14px;
+
+  color: #687c89;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.about-section-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 70px;
+  align-items: end;
+
+  margin-bottom: 38px;
+}
+
+.about-section-heading > p {
+  color: #6b7f8c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.about-approach {
+  background: #ffffff;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.approach-card {
+  min-height: 230px;
+  padding: 25px;
+
+  background: #f1f7fa;
+  border: 1px solid #dce8ef;
+
+  transition: 0.3s ease;
+}
+
+.approach-card:hover {
+  background: #123e5c;
+  transform: translateY(-5px);
+}
+
+.approach-number {
+  color: #b28842;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+}
+
+.approach-card h3 {
+  margin: 35px 0 10px;
+
+  color: #123b57;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.approach-card p {
+  color: #6c808c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.approach-card:hover h3,
+.approach-card:hover p {
+  color: #ffffff;
+}
+
+.approach-card:hover .approach-number {
+  color: #e6cc94;
+}
+
+/* =========================================================
+   PURPOSE
+========================================================= */
+
+.about-purpose {
+  background: #eaf4f9;
+}
+
+.purpose-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 75px;
+}
+
+.purpose-heading p {
+  margin-top: 18px;
+  color: #647987;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.purpose-points > div {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 18px;
+
+  padding: 18px 0;
+  border-bottom: 1px solid #cedfe8;
+}
+
+.purpose-points > div:first-child {
+  border-top: 1px solid #cedfe8;
+}
+
+.purpose-points > div > span {
+  color: #ae833d;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+
+.purpose-points h3 {
+  color: #123b57;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.purpose-points p {
+  max-width: 550px;
+  margin-top: 4px;
+
+  color: #6c808c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PRINCIPLES
+========================================================= */
+
+.about-principles {
+  background: #ffffff;
+}
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.principle-grid article {
+  min-height: 230px;
+  padding: 25px;
+
+  border: 1px solid #dae7ee;
+  background: #ffffff;
+
+  transition: 0.3s ease;
+}
+
+.principle-grid article:hover {
+  box-shadow: 0 15px 40px rgba(20, 61, 88, 0.08);
+  transform: translateY(-4px);
+}
+
+.principle-grid b {
+  color: #b1853f;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+}
+
+.principle-grid h3 {
+  margin: 32px 0 10px;
+
+  color: #123b57;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.principle-grid p {
+  color: #71838e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   DESIGN
+========================================================= */
+
+.about-design {
+  background: #f3f8fb;
+}
+
+.about-design-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-design-copy p {
+  margin-top: 15px;
+
+  color: #667b88;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-design-images {
+  position: relative;
+  min-height: 500px;
+}
+
+.about-design-main {
+  width: 78%;
+  height: 470px;
+  object-fit: cover;
+}
+
+.about-design-small {
+  position: absolute;
+  width: 45%;
+  height: 240px;
+  right: 0;
+  bottom: 0;
+
+  object-fit: cover;
+
+  border: 10px solid #f3f8fb;
+}
+
+/* =========================================================
+   VISION MISSION
+========================================================= */
+
+.vision-mission {
+  background: #103b59;
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.vision-mission article {
+  padding: 15px 60px 15px 0;
+}
+
+.vision-mission article + article {
+  padding-left: 60px;
+  padding-right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.vision-mission .eyebrow {
+  color: #e6cc94;
+}
+
+.vision-mission h2 {
+  color: #ffffff;
+  font-size: clamp(30px, 3.5vw, 43px);
+}
+
+.vision-mission h2 span {
+  color: #e6cc94;
+}
+
+.vision-mission p {
+  margin-top: 17px;
+
+  color: #cbdbe4;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FUTURE
+========================================================= */
+
+.about-future {
+  background: #ffffff;
+}
+
+.about-future-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+}
+
+.about-future-grid p {
+  margin-bottom: 14px;
+
+  color: #667b88;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-future .btn {
+  margin-top: 10px;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.about-final-cta {
+  padding: 85px 0;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(7, 31, 50, 0.91),
+      rgba(7, 31, 50, 0.94)
+    ),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=88")
+    center / cover;
+}
+
+.about-final-cta .eyebrow {
+  color: #e6cc94;
+}
+
+.about-final-cta h2 {
+  max-width: 750px;
+  margin: 5px auto 15px;
+
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.12;
+  font-weight: 500;
+}
+
+.about-final-cta h2 span {
+  color: #e6cc94;
+}
+
+.about-final-cta p {
+  max-width: 590px;
+  margin: 0 auto 25px;
+
+  color: #cbd9e1;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.about-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-final-cta .btn {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #103b59;
+}
+
+.about-final-cta .about-outline-btn {
+  background: transparent;
+  color: #ffffff;
+}
+
+.about-final-cta .about-outline-btn:hover {
+  background: #ffffff;
+  color: #103b59;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+  .about-intro-grid,
+  .about-story-layout,
+  .about-design-grid,
+  .purpose-layout,
+  .about-future-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .approach-grid,
+  .principle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-section-heading {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .about-story-image {
+    height: 450px;
+  }
+
+  .about-image-label {
+    right: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-hero {
+    min-height: 68vh;
+    padding: 130px 0 60px;
+  }
+
+  .about-hero .page-title {
+    font-size: 43px;
+  }
+
+  .about-intro,
+  .about-story,
+  .about-approach,
+  .about-purpose,
+  .about-principles,
+  .about-design,
+  .vision-mission,
+  .about-future {
+    padding: 55px 0;
+  }
+
+  .about-intro h2,
+  .about-story h2,
+  .about-approach h2,
+  .about-purpose h2,
+  .about-principles h2,
+  .about-design h2,
+  .about-future h2 {
+    font-size: 32px;
+  }
+
+  .approach-grid,
+  .principle-grid,
+  .about-stats-grid,
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats-grid > div {
+    min-height: 95px;
+    border-right: 0;
+    border-bottom: 1px solid #d5e3eb;
+  }
+
+  .approach-card,
+  .principle-grid article {
+    min-height: auto;
+  }
+
+  .about-story-image {
+    height: 370px;
+  }
+
+  .about-image-label {
+    width: 190px;
+    padding: 16px;
+  }
+
+  .about-design-images {
+    min-height: 400px;
+  }
+
+  .about-design-main {
+    height: 370px;
+    width: 88%;
+  }
+
+  .about-design-small {
+    height: 180px;
+    width: 48%;
+    border-width: 7px;
+  }
+
+  .vision-mission article,
+  .vision-mission article + article {
+    padding: 25px 0;
+    border-left: 0;
+  }
+
+  .vision-mission article + article {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .about-final-cta {
+    padding: 70px 0;
+  }
+}

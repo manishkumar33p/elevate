@@ -1,0 +1,567 @@
+/* .contact-hero{background-image:linear-gradient(90deg,rgba(5,12,9,.94),rgba(5,12,9,.4)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1900&q=88')}.contact-section{background:#101c18}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}.contact-copy>p{color:#9eaaa4;margin:22px 0 30px}.contact-detail{padding:18px 0;border-top:1px solid #2a3a33}.contact-detail:last-child{border-bottom:1px solid #2a3a33}.contact-detail small{display:block;color:#c9a96b;text-transform:uppercase;letter-spacing:1.5px;font-size:9px}.contact-detail b{font-weight:500;font-size:14px}.contact-form{background:#0b1512;border:1px solid #2a3a33;padding:36px}.contact-form label{display:block;color:#b7c1bc;font-size:12px;margin-bottom:18px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.contact-form input,.contact-form select,.contact-form textarea{width:100%;margin-top:7px;background:#101c18;border:1px solid #34443c;color:#fff;padding:13px 14px;outline:none}.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#c9a96b}.contact-form textarea{resize:vertical}.success{margin-top:16px;color:#d9c28f;font-size:12px}@media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:45px}.form-row{grid-template-columns:1fr}.contact-form{padding:24px}} */
+/* =========================================================
+   CONTACT PAGE
+   PREMIUM WHITE + BLUE + SUBTLE GOLD
+========================================================= */
+
+.contact-hero {
+  min-height: 70vh;
+  padding: 150px 0 85px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(247, 250, 252, 0.98) 0%,
+      rgba(247, 250, 252, 0.93) 50%,
+      rgba(247, 250, 252, 0.56) 100%
+    ),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=90")
+      center / cover;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -220px;
+  top: 70px;
+  border: 1px solid rgba(18, 56, 80, 0.09);
+  border-radius: 50%;
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top: 160px;
+  border: 1px solid rgba(176, 135, 69, 0.16);
+  border-radius: 50%;
+}
+
+.contact-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 70px;
+  align-items: end;
+}
+
+.contact-hero .page-title {
+  margin-top: 8px;
+  color: #123850;
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1;
+  letter-spacing: -1.8px;
+}
+
+.contact-hero .page-title span {
+  color: #b08745;
+}
+
+.contact-hero p {
+  max-width: 680px;
+  margin-top: 27px;
+  color: #647985;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.contact-hero-line {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-hero-line span {
+  width: 55px;
+  height: 1px;
+  background: #b08745;
+}
+
+.contact-hero-line small {
+  color: #758892;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.contact-hero-side {
+  border-left: 1px solid rgba(18, 56, 80, 0.16);
+  padding-left: 26px;
+  padding-bottom: 5px;
+}
+
+.contact-hero-side strong {
+  display: block;
+  color: #123850;
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.contact-hero-side span {
+  display: block;
+  margin-top: 7px;
+  color: #7a8b95;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONTACT MAIN
+========================================================= */
+
+.contact-section {
+  padding: 95px 0;
+  background: #ffffff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 75px;
+  align-items: start;
+}
+
+.contact-copy {
+  padding-top: 8px;
+}
+
+.contact-copy .section-title {
+  margin-top: 8px;
+  color: #123850;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 4.5vw, 60px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.contact-copy .section-title span {
+  color: #b08745;
+}
+
+.contact-description {
+  max-width: 510px;
+  margin-top: 24px;
+  color: #687c87;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.contact-details {
+  margin-top: 35px;
+  border-top: 1px solid #dce7ed;
+}
+
+.contact-detail {
+  padding: 17px 0;
+  border-bottom: 1px solid #dce7ed;
+}
+
+.contact-detail small {
+  display: block;
+  margin-bottom: 5px;
+  color: #9aabb4;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.contact-detail b {
+  color: #123850;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: fit-content;
+  margin-top: 27px;
+  padding: 14px 18px;
+  border: 1px solid #d9e6ec;
+  background: #f4f9fb;
+  transition: all 0.3s ease;
+}
+
+.contact-whatsapp:hover {
+  border-color: #123850;
+  transform: translateY(-2px);
+}
+
+.whatsapp-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #123850;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.contact-whatsapp small {
+  display: block;
+  color: #b08745;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.contact-whatsapp strong {
+  display: block;
+  margin-top: 3px;
+  color: #123850;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM BOX
+========================================================= */
+
+.contact-form-box {
+  padding: 42px;
+  background: #f7fafc;
+  border: 1px solid #dce7ed;
+}
+
+.form-heading {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #dce7ed;
+}
+
+.form-heading > span {
+  color: #b08745;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.form-heading h3 {
+  color: #123850;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.form-heading p {
+  margin-top: 5px;
+  color: #788b95;
+  font-size: 12px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form label {
+  display: block;
+  color: #526b78;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px 15px;
+  border: 1px solid #d4e1e8;
+  outline: none;
+  background: #ffffff;
+  color: #123850;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #a3b0b7;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #123850;
+  box-shadow: 0 0 0 3px rgba(18, 56, 80, 0.06);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 145px;
+}
+
+.contact-submit {
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #123850;
+  background: #123850;
+  color: #ffffff;
+}
+
+.contact-submit:hover {
+  border-color: #b08745;
+  background: #b08745;
+  color: #ffffff;
+}
+
+.success {
+  padding: 12px 14px;
+  border-left: 2px solid #b08745;
+  background: #edf6fa;
+  color: #536f7d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   OPPORTUNITIES
+========================================================= */
+
+.contact-opportunities {
+  padding: 90px 0;
+  background: #f7fafc;
+}
+
+.opportunities-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 45px;
+}
+
+.opportunities-heading h2 {
+  margin-top: 8px;
+  color: #123850;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.opportunities-heading h2 span {
+  color: #b08745;
+}
+
+.opportunities-heading > p {
+  max-width: 440px;
+  color: #70838d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.opportunity-grid article {
+  min-height: 250px;
+  padding: 27px;
+  background: #ffffff;
+  border: 1px solid #dce7ed;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.opportunity-grid article:hover {
+  transform: translateY(-4px);
+  border-color: #b8ccd7;
+}
+
+.opportunity-grid article > span {
+  color: #b08745;
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+}
+
+.opportunity-grid h3 {
+  margin-top: 48px;
+  color: #123850;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.opportunity-grid p {
+  margin-top: 10px;
+  color: #748690;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.contact-final {
+  padding: 78px 0;
+  text-align: center;
+  background: #123850;
+}
+
+.contact-final .eyebrow {
+  color: #e5ca91;
+}
+
+.contact-final h2 {
+  max-width: 850px;
+  margin: 8px auto 0;
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.contact-final h2 span {
+  color: #e5ca91;
+}
+
+.contact-final .btn {
+  margin-top: 27px;
+  background: #e5ca91;
+  border-color: #e5ca91;
+  color: #123850;
+}
+
+.contact-final .btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+  .contact-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .contact-hero-side {
+    max-width: 280px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .opportunity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .opportunities-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-hero {
+    min-height: 70vh;
+    padding: 125px 0 65px;
+  }
+
+  .contact-hero .page-title {
+    font-size: 46px;
+  }
+
+  .contact-hero p {
+    font-size: 15px;
+  }
+
+  .contact-section {
+    padding: 70px 0;
+  }
+
+  .contact-copy .section-title {
+    font-size: 40px;
+  }
+
+  .contact-form-box {
+    padding: 28px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-opportunities {
+    padding: 70px 0;
+  }
+
+  .opportunities-heading h2 {
+    font-size: 40px;
+  }
+
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-final {
+    padding: 65px 0;
+  }
+
+  .contact-final h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .contact-hero .page-title {
+    font-size: 40px;
+  }
+
+  .contact-copy .section-title,
+  .opportunities-heading h2,
+  .contact-final h2 {
+    font-size: 34px;
+  }
+
+  .contact-whatsapp {
+    width: 100%;
+  }
+}
