@@ -383,40 +383,34 @@ export function resetElevateData() {
 
 export { STORAGE_KEYS };
 
-export default {
+const siteDataAPI = {
   getSiteData,
   saveSiteData,
-
   getProjects,
   saveProjects,
   addProject,
   updateProject,
   deleteProject,
   getProjectById,
-
   getGallery,
   saveGallery,
   addGalleryItem,
   updateGalleryItem,
   deleteGalleryItem,
-
   getLeadership,
-  saveLeadership,
   addLeader,
   updateLeader,
   deleteLeader,
-
   getExpertise,
-  saveExpertise,
   addExpertise,
   updateExpertise,
   deleteExpertise,
-
   getEnquiries,
   saveEnquiries,
   addEnquiry,
   updateEnquiry,
   deleteEnquiry,
-
   resetElevateData,
 };
+
+export default siteDataAPI;
