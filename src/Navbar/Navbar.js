@@ -1,13 +1,12 @@
-// // import React,{useState} from "react";
-// // import {Link,NavLink} from "react-router-dom";
-// // import "./Navbar.css";
-// // export default function Navbar(){const[open,setOpen]=useState(false);const links=[["/","Home"],["/about","About"],["/expertise","Expertise"],["/projects","Developments"],["/leadership","Leadership"],["/gallery","Gallery"]];return <header className="navbar"><div className="container nav-inner"><Link className="brand" to="/" onClick={()=>setOpen(false)}><span className="brand-mark">E</span><span className="brand-copy"><b>ELEVATE</b><small>INFRA</small></span></Link><button className="menu-btn" aria-label="Menu" onClick={()=>setOpen(!open)}>{open?"×":"☰"}</button><nav className={open?"nav-links open":"nav-links"}>{links.map(([to,label])=><NavLink key={to} to={to} end={to==="/"} onClick={()=>setOpen(false)}>{label}</NavLink>)}<Link className="nav-cta" to="/contact" onClick={()=>setOpen(false)}>Enquire ↗</Link></nav></div></header>}
+
+
 // import React, { useState } from "react";
 // import { Link, NavLink } from "react-router-dom";
 // import "./Navbar.css";
 
 // export default function Navbar() {
 //   const [open, setOpen] = useState(false);
+//   const [adminOpen, setAdminOpen] = useState(false);
 
 //   const links = [
 //     ["/", "Home"],
@@ -18,6 +17,11 @@
 //     ["/gallery", "Gallery"],
 //   ];
 
+//   const closeMenu = () => {
+//     setOpen(false);
+//     setAdminOpen(false);
+//   };
+
 //   return (
 //     <header className="navbar">
 //       <div className="container nav-inner">
@@ -26,7 +30,7 @@
 //         <Link
 //           className="brand"
 //           to="/"
-//           onClick={() => setOpen(false)}
+//           onClick={closeMenu}
 //         >
 //           <span className="brand-mark">E</span>
 
@@ -35,6 +39,7 @@
 //             <small>INFRA</small>
 //           </span>
 //         </Link>
+
 
 //         {/* MOBILE MENU */}
 //         <button
@@ -45,33 +50,112 @@
 //           {open ? "×" : "☰"}
 //         </button>
 
+
 //         {/* NAVIGATION */}
 //         <nav className={open ? "nav-links open" : "nav-links"}>
+
+//           {/* MAIN LINKS */}
 //           {links.map(([to, label]) => (
 //             <NavLink
 //               key={to}
 //               to={to}
 //               end={to === "/"}
-//               onClick={() => setOpen(false)}
+//               onClick={closeMenu}
 //             >
 //               {label}
 //             </NavLink>
 //           ))}
 
+
+//           {/* ADMIN DROPDOWN */}
+//           <div
+//             className="nav-admin-dropdown"
+//             onMouseEnter={() => setAdminOpen(true)}
+//             onMouseLeave={() => setAdminOpen(false)}
+//           >
+
+//             <button
+//               type="button"
+//               className="nav-admin-trigger"
+//               onClick={() => setAdminOpen(!adminOpen)}
+//             >
+//               Admin
+//               <span className={adminOpen ? "admin-arrow rotate" : "admin-arrow"}>
+//                 ↓
+//               </span>
+//             </button>
+
+
+//             {adminOpen && (
+//               <div className="nav-admin-menu">
+
+//                 <Link
+//                   to="/admin"
+//                   onClick={closeMenu}
+//                 >
+//                   <span className="admin-menu-number">01</span>
+
+//                   <div>
+//                     <strong>Admin Dashboard</strong>
+//                     <small>Website control panel</small>
+//                   </div>
+
+//                   <b>↗</b>
+//                 </Link>
+
+
+//                 <Link
+//                   to="/admin"
+//                   onClick={closeMenu}
+//                 >
+//                   <span className="admin-menu-number">02</span>
+
+//                   <div>
+//                     <strong>Developments</strong>
+//                     <small>Manage projects</small>
+//                   </div>
+
+//                   <b>↗</b>
+//                 </Link>
+
+
+//                 <Link
+//                   to="/admin"
+//                   onClick={closeMenu}
+//                 >
+//                   <span className="admin-menu-number">03</span>
+
+//                   <div>
+//                     <strong>Enquiries</strong>
+//                     <small>View website leads</small>
+//                   </div>
+
+//                   <b>↗</b>
+//                 </Link>
+
+//               </div>
+//             )}
+
+//           </div>
+
+
+//           {/* ENQUIRE */}
 //           <Link
 //             className="nav-cta"
 //             to="/contact"
-//             onClick={() => setOpen(false)}
+//             onClick={closeMenu}
 //           >
 //             Enquire
 //             <span>↗</span>
 //           </Link>
+
 //         </nav>
 
 //       </div>
 //     </header>
 //   );
 // }
+
 
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
@@ -105,14 +189,17 @@ export default function Navbar() {
           to="/"
           onClick={closeMenu}
         >
-          <span className="brand-mark">E</span>
+          <img
+            src="/logo.png"
+            alt="Elevate Infra"
+            className="brand-logo"
+          />
 
           <span className="brand-copy">
             <b>ELEVATE</b>
-            <small>INFRA</small>
+            <small>INFRA DEVELOPER</small>
           </span>
         </Link>
-
 
         {/* MOBILE MENU */}
         <button
@@ -122,7 +209,6 @@ export default function Navbar() {
         >
           {open ? "×" : "☰"}
         </button>
-
 
         {/* NAVIGATION */}
         <nav className={open ? "nav-links open" : "nav-links"}>
@@ -139,33 +225,33 @@ export default function Navbar() {
             </NavLink>
           ))}
 
-
           {/* ADMIN DROPDOWN */}
           <div
             className="nav-admin-dropdown"
             onMouseEnter={() => setAdminOpen(true)}
             onMouseLeave={() => setAdminOpen(false)}
           >
-
             <button
               type="button"
               className="nav-admin-trigger"
               onClick={() => setAdminOpen(!adminOpen)}
             >
               Admin
-              <span className={adminOpen ? "admin-arrow rotate" : "admin-arrow"}>
+              <span
+                className={
+                  adminOpen
+                    ? "admin-arrow rotate"
+                    : "admin-arrow"
+                }
+              >
                 ↓
               </span>
             </button>
 
-
             {adminOpen && (
               <div className="nav-admin-menu">
 
-                <Link
-                  to="/admin"
-                  onClick={closeMenu}
-                >
+                <Link to="/admin" onClick={closeMenu}>
                   <span className="admin-menu-number">01</span>
 
                   <div>
@@ -176,11 +262,7 @@ export default function Navbar() {
                   <b>↗</b>
                 </Link>
 
-
-                <Link
-                  to="/admin"
-                  onClick={closeMenu}
-                >
+                <Link to="/development-admin" onClick={closeMenu}>
                   <span className="admin-menu-number">02</span>
 
                   <div>
@@ -191,11 +273,7 @@ export default function Navbar() {
                   <b>↗</b>
                 </Link>
 
-
-                <Link
-                  to="/admin"
-                  onClick={closeMenu}
-                >
+                <Link to="/admin" onClick={closeMenu}>
                   <span className="admin-menu-number">03</span>
 
                   <div>
@@ -208,9 +286,7 @@ export default function Navbar() {
 
               </div>
             )}
-
           </div>
-
 
           {/* ENQUIRE */}
           <Link
@@ -223,7 +299,6 @@ export default function Navbar() {
           </Link>
 
         </nav>
-
       </div>
     </header>
   );

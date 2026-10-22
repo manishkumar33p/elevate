@@ -788,3 +788,31 @@
     height: 39px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #f7fcff;
+
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 78px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+}

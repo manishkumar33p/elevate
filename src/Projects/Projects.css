@@ -916,3 +916,391 @@
     padding: 70px 0;
   }
 }
+
+
+
+
+/* =========================================================
+   DEVELOPMENT JOURNEY / FIREBASE PORTFOLIO
+========================================================= */
+
+.development-journey {
+  padding: 110px 0;
+  background: #07110d;
+}
+
+.development-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 55px;
+}
+
+.development-journey-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(198, 169, 92, 0.18);
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.development-journey-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(198, 169, 92, 0.5);
+}
+
+.development-journey-image {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background: #101a15;
+}
+
+.development-journey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.development-journey-card:hover
+.development-journey-image img {
+  transform: scale(1.04);
+}
+
+.development-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c6a95c;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.development-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(5, 15, 10, 0.8);
+  color: #c6a95c;
+  padding: 8px 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.development-status {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  background: rgba(5, 15, 10, 0.85);
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.development-journey-content {
+  padding: 30px;
+}
+
+.development-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #a9aaa5;
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.development-journey-content h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 27px;
+}
+
+.development-journey-content h4 {
+  margin: 0 0 20px;
+  color: #c6a95c;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.development-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.development-tags span {
+  border: 1px solid rgba(198, 169, 92, 0.3);
+  color: #d7c58d;
+  padding: 7px 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.development-role {
+  color: #d0d1cc !important;
+  margin-bottom: 12px !important;
+}
+
+.development-journey-content p {
+  color: #999f99;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .development-journey {
+    padding: 75px 0;
+  }
+
+  .development-journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .development-journey-image {
+    height: 240px;
+  }
+
+  .development-journey-content {
+    padding: 24px;
+  }
+
+  .development-journey-content h3 {
+    font-size: 23px;
+  }
+}
+
+
+
+
+
+
+
+/* =========================================================
+   DEVELOPMENT JOURNEY / FIREBASE PORTFOLIO
+   WHITE PREMIUM STYLE
+========================================================= */
+
+.development-journey {
+  padding: 110px 0;
+  background: #ffffff;
+}
+
+.development-journey .projects-list-head {
+  margin-bottom: 0;
+}
+
+.development-journey .projects-list-head h2 {
+  color: #0d2940;
+}
+
+.development-journey .projects-list-head h2 span {
+  color: #a8863c;
+}
+
+.development-journey .projects-list-head p {
+  color: #66717a;
+}
+
+/* GRID */
+
+.development-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 55px;
+}
+
+/* CARD */
+
+.development-journey-card {
+  background: #ffffff;
+  border: 1px solid #e4e8eb;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(13, 41, 64, 0.07);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.development-journey-card:hover {
+  transform: translateY(-6px);
+  border-color: #c9a45c;
+  box-shadow: 0 20px 45px rgba(13, 41, 64, 0.12);
+}
+
+/* IMAGE */
+
+.development-journey-image {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background: #eef1f3;
+}
+
+.development-journey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.development-journey-card:hover
+.development-journey-image img {
+  transform: scale(1.04);
+}
+
+/* NO IMAGE */
+
+.development-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f4f5;
+  color: #a8863c;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+/* NUMBER */
+
+.development-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #173a52;
+  color: #ffffff;
+  padding: 9px 13px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* STATUS */
+
+.development-status {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  background: #ffffff;
+  color: #173a52;
+  padding: 9px 13px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* CONTENT */
+
+.development-journey-content {
+  padding: 30px;
+}
+
+/* META */
+
+.development-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #7a858c;
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* TITLE */
+
+.development-journey-content h3 {
+  margin: 0 0 8px;
+  color: #102f47;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* BUILDER */
+
+.development-journey-content h4 {
+  margin: 0 0 20px;
+  color: #a8863c;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* TAGS */
+
+.development-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.development-tags span {
+  border: 1px solid #d8c28d;
+  background: #faf8f1;
+  color: #8d6d29;
+  padding: 7px 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+/* ROLE */
+
+.development-role {
+  color: #4f5d66 !important;
+  margin-bottom: 12px !important;
+}
+
+.development-role strong {
+  color: #173a52;
+}
+
+/* DESCRIPTION */
+
+.development-journey-content p {
+  color: #68757d;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .development-journey {
+    padding: 75px 0;
+  }
+
+  .development-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .development-journey-image {
+    height: 240px;
+  }
+
+  .development-journey-content {
+    padding: 24px;
+  }
+
+  .development-journey-content h3 {
+    font-size: 23px;
+  }
+
+  .development-meta {
+    font-size: 11px;
+  }
+}
