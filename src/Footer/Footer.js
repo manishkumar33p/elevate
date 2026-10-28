@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
-const WHATSAPP_NUMBER = "919958424916";
+const WHATSAPP_NUMBER = "919911924138";
 
 export default function Footer() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -98,7 +98,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            +91 99584 24916
+            +91 9911924138
           </a>
 
           <a href="mailto:info@elevateinfra.com">

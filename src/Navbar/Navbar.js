@@ -169,7 +169,7 @@ export default function Navbar() {
     ["/", "Home"],
     ["/about", "About"],
     ["/expertise", "Expertise"],
-    ["/projects", "Developments"],
+    ["/projects", "Projects"],
     ["/leadership", "Leadership"],
     ["/gallery", "Gallery"],
   ];

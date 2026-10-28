@@ -624,23 +624,23 @@ import {
 const defaultLeaders = [
   {
     id: "leader-01",
-    name: "Karan Jha",
+    name: "Mr.Karan Jha",
     role: "Director — Strategy & Growth",
     shortRole: "Strategy & Growth",
     image: "/karan.jpeg",
     bio:
-      "Focused on building a disciplined development platform with a long-term approach to real estate, partnerships and value creation.",
+      "Focused on real estate since 2009, with experience across diverse sectors and projects, building a disciplined development platform through strategic partnerships, a long-term vision, and sustainable value creation.",
   },
 
   {
     id: "leader-02",
-    name: "Deepak Awana",
+    name: "Mr .Deepak Awana",
     role: "Director — Projects & Operations",
     shortRole: "Projects & Operations",
     image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=90",
+      "D.jpeg",
     bio:
-      "Bringing together thoughtful planning, people-first decision making and a strong commitment to quality across every development opportunity.",
+      "Since 2012, bringing together thoughtful planning, people-first decision-making, and a strong commitment to quality across every real estate development opportunity.",
   },
 ];
 
